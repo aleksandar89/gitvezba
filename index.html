@@ -1,10 +1,31 @@
 <html>
 <head>
 	<title>Hello World</title>
+	<script src="http://yui.yahooapis.com/3.10.3/build/yui/yui-min.js"></script>
+	
+	<script>
+		// Create a YUI sandbox on your page.
+		YUI().use('node', 'event', function (Y) {
+			// The Node and Event modules are loaded and ready to use.
+			// Your code goes here!
+			
+			var helloWorld = function(e) {
+				e.target.setHTML("Hello World!");
+				//Y.one('#container').addClass('hello');
+			}
+			
+			
+			var node = Y.one('#sakrij');
+
+			node.on("click", helloWorld);
+		});
+	</script>
 </head>
 <body>
 </body>
-<h1> Ne znam cak ni HTML! </h1> </br>
+<button id="sakrij" >Dodaj</button>
+</div>
+<h1 > HTML </h1> </br>
 <h3> Ali dobro... moze i ovako.. </h3>
 
 <table border="1">
